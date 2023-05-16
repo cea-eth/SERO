@@ -1,0 +1,53 @@
+,"Please list possible classes to classify the factors listed in the previous section (to building, assembly, and element)."
+0,"accessibilité/localisation, état, masse/impact co, dimensions, quantité, performances techniques, valeur(s), équilibre économique du réemploi"
+1,"facteur logisitique, - technique, - esthetique, - economique, - ecologique, - chance, - propriétés, - -mécanique, - physique, - chimique, - social, - architectural, "
+2,"caractéristiques techniques: poids, profil, qualité de l'acier
+etat: etat de surface, endommagé ou non
+demontabilité: type d'assemblage, dimension objet/dimansion portes, ascenseur...
+reemployabilité: normes appliquées au l'objet/age de l'objet, rareté, prix neuf, embodied co2
+pollution: présence de polluant ou non"
+3,"technical, logistical, aesthetic, related to health, economic, environmental "
+4,nan
+5,nan
+6,"beschreibung/zustand, quantität, qualität, schadstoffe, ökologisches potential, ökonomisches potential, wirtschaftliches potential, architektonisches potential (identitätsmerkmal), logistik, netzwerk (erfahrung, nachfrage, demontierbarkeit)"
+7,"gestalterische faktoren (farbe, form, wiederholungsmöglichkeiten, ...)
+logistikfaktoren (zugänglichkeit, verfügbarkeit, zeit, ...)
+konstruktive faktoren (tragfähigkeit, sprödheit, ...)
+sowieso - faktoren (minderkosten beim rückbau, co2-potenzial, ...)
+marktfaktoren (direktes matchmaking on site, demand aus der industrie, ...)"
+8,"zustand/beschichtung der baugruppenmitglieder ist ein technischer faktor, der wichtig für den wiedereinbau ist und gleichzeitig ausschlaggebend für die kosten, sollten ausbesserungen nötig sein "
+9,"1. technische wiederverwendbarkeit (schadstoffe, tragfähigkeit, etc..) 
+- kann ich das überhaupt verwenden oder stirbt dann wer?
+- hält das ding das noch aus als was es gedacht ist? 
+- entspricht es noch normen? 
+....
+2. kosten / wirtschaftlichkeit ( kosten der beschaffung vs. beschaffung neubauteil) 
+- was kostet das ding ab demontage bis einlagerung (inkl. koordinationsaufwände)
+- was kostet das ding neu? 
+- was kostet die notwendige aufbereitung? (anpassung auf normen, etc..) 
+- was kosten etwaige anpassungen (schneiden, schleifen, ...)
+- verhältnis der gesamtkosten reuse vs. neu? --> wirtschaftlichkeit
+
+3. logistik / komplexität der beschaffung (ausbaubarkeit, transport, lagerung, etc..)
+- bekomme ich das ding raus? (maschinenaufwände, z.b. spitzen...)
+- kann das manuell gehandelt werden? kran, rolli, stapler? 
+- kann ich das einfach lagern? brauche ich spezielle lagervorrichtungen? 
+- wie komplex sind spätere aufnahmen (im lager, z.b. umschichten)
+ 
+4. impact / emissionsreduktion vs. neubauteil
+- wieviel co2-equ. / primärenergie spare ich ein?
+
+5. planerische wiederverwendbarkeit (flexibilität, anpassbarkeit, etc.)
+- wie leicht lässt sich das ding einplanen? 
+- wie leicht lässt es sich anpassen / verändern? (z.b. schleifen, schneiden holz vs. beton/stahl)"
+10,"ästhetik, kosten, materialeigenschaften, bauphysikalische eigenschaften, transport und logistik, rückbauprozess, termineigenschaften, wertigkeit, komplexität, "
+11,"selektive rück-/einbaubarkeit, länge (bezogen auf stahlträger), anzahl, graue energie, schadstoffbelastung, notwendigkeit/ausmaß der aufarbeitung"
+12,"verfügbarkeit, machbarkeit, sinnhaftigkeit, verhältnismässigkeit, finanzierbarkeit"
+13,"übergeordnete / metainformationen (zeit, ort, nutzung, anwesenheit von schadstoffen, zugänglichkeit....), spezifische informationen (material, zustand, menge, gewicht, ästhetik, soz. wert...), prozessorientierte informationen (kosten, weiterverarbeitung...."
+14,-
+15,"zeitliche faktoren, demontageablauf/prozess (eigentümerschaft, hirachie im gebäude, verbindungsmittel... ), bauteilbeschrieb (unterkategorieen: geometrie, materialkennwerte, beschichtung, zustand/schäden), gefahren (schadstoffe, höhe, ...), kosten"
+16,"kosten, gewicht, geometrie, zustand, termine, menge, qualität, spezifizierung/modularität, zusammenarbeit/kollaboration"
+17,"kosten faktor, co2 faktor"
+18,"abmessung, zusammensetzung, alter, einsatz, zustand, ort, bearbeitbarkeit, kosten, energie,"
+19,"zeitlich, rückbautechnisch, qualitativ, finanziell, technisch, nachfrage-dienlich"
+20,"funktion, rückbaufreundlichkeit, aufwand / kosten, quantität, qualität / zustand,  schadstoffbelastung, spezifikationen, ort, produktionszeitraum, vermittlungszeitraum, gebäudedaten, (ökonomischer) wert, co2 fußabdruck"

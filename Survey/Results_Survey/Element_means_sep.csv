@@ -1,0 +1,45 @@
+,Name,mean
+0,Function (use) of element,3.0952380952380953
+1,Coating age,3.2857142857142856
+2,Social (e.g. historic) value,3.2857142857142856
+3,Date of production (age of element),3.380952380952381
+4,Carbon equivalent value,3.380952380952381
+5,"Other measures (flange, bar) of profile",3.4285714285714284
+6,Replacability (spare parts) of elements,3.4285714285714284
+7,Weldability,3.4285714285714284
+8,Presence of coating,3.4761904761904763
+9,Thickness of profile,3.5714285714285716
+10,Height of profile,3.5714285714285716
+11,Width of profile,3.5714285714285716
+12,Material Group,3.5714285714285716
+13,Cost of transport,3.619047619047619
+14,Chemical composition (material composition),3.619047619047619
+15,Coating material composition,3.6666666666666665
+16,Location in Building,3.6666666666666665
+17,Strength - tensile,3.7142857142857144
+18,Strength - yield,3.7142857142857144
+19,Elongation,3.7142857142857144
+20,Strength - class,3.761904761904762
+21,Cost of storage,3.761904761904762
+22,Material value,3.761904761904762
+23,Exposition of element,3.761904761904762
+24,Embodied CO2 / CO2 eq. Saving,3.8095238095238093
+25,Hierarchy of element - Dependance and relation to other elements,3.8095238095238093
+26,Coating type,3.8095238095238093
+27,Type / Section of profile,3.857142857142857
+28,Cost of equivalent new element,3.9047619047619047
+29,Straightness,3.9047619047619047
+30,Type of connection of element,3.9047619047619047
+31,"Cost of testing (chemical composition, hazardous substances…)",3.9523809523809526
+32,Condition - damage due to abrasion,4.095238095238095
+33,"Cost of rework (Cleaning, remanufacturing etc.)",4.238095238095238
+34,Accessibility of connection,4.238095238095238
+35,Amount (quantity) of same element,4.380952380952381
+36,Condition - damage due to corrosion,4.571428571428571
+37,Condition - damage due to embrittlement,4.619047619047619
+38,Presence of hazardous substances in element,4.619047619047619
+39,Condition - plastic deformation,4.714285714285714
+40,Condition - damage due to fire,4.714285714285714
+41,Condition - damage due to fatigue,4.761904761904762
+42,Condition - presence of radioactivity,4.809523809523809
+43,Presence of hazardous substances in coating of element,4.857142857142857
