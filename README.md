@@ -10,10 +10,11 @@ The transition to a circular economy and the closure of material loops in the co
 Structure
 =========
 
-IM-Example-Project
-|-- 00-Literature Research
-|   |-- XX
-|-- 01-Survey Analysis
-|   |-- doc
-|-- 02-Interview Analysis
-|-- 03-SERO
+**Formalization of Inventory Processes**
+<br />
+<br />|-- 00-Literature Research
+<br />|   |-- XX
+<br />|-- 01-Survey Analysis
+<br />|   |-- doc
+<br />|-- 02-Interview Analysis
+<br />|-- 03-SERO
