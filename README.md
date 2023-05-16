@@ -12,9 +12,9 @@ Structure
 
 **Formalization of Inventory Processes**
 <br />
-<br />|-- 00-Literature Research
+<br />|-- 00 - Literature Research
 <br />|   |-- XX
-<br />|-- 01-Survey Analysis
+<br />|-- 01 - Survey Analysis
 <br />|   |-- doc
-<br />|-- 02-Interview Analysis
-<br />|-- 03-SERO
+<br />|-- 02 - Interview Analysis
+<br />|-- 03 - SERO
