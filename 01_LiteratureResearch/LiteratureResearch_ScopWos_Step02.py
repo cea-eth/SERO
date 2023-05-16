@@ -1,19 +1,18 @@
-## Master Thesis
-# Systemic Literature Review inspired by Kira
-
 import pandas as pd
 import numpy as np
-import Functions_FoIP as flr
+from os.path import realpath, dirname, join
+import Functions_FoIP as foip
 
 ### Get data from Excel and convert to Dataframe
+folder_path = dirname(realpath(__file__))
 
 ## Scopus
-scop_R1 = pd.read_csv('/Users/leonhardschonfelder/Desktop/02_Code/Research_02/ScopusR1_Step01.csv')
-scop_R2 = pd.read_csv('/Users/leonhardschonfelder/Desktop/02_Code/Research_02/ScopusR2_Step01.csv')
+scop_R1 = pd.read_csv(join(folder_path,'Research_02/ScopusR1_Step01.csv'))
+scop_R2 = pd.read_csv(join(folder_path,'Research_02/ScopusR2_Step01.csv'))
 
 ## Web of Science
-wos_R1 = pd.read_csv('/Users/leonhardschonfelder/Desktop/02_Code/Research_02/WoSR1_Step01.csv')
-wos_R2 = pd.read_csv('/Users/leonhardschonfelder/Desktop/02_Code/Research_02/WoSR2_Step01.csv')
+wos_R1 = pd.read_csv(join(folder_path,'Research_02/WoSR1_Step01.csv'))
+wos_R2 = pd.read_csv(join(folder_path,'Research_02/WoSR2_Step01.csv'))
 
     # Rename WoS Column title
 
@@ -41,10 +40,10 @@ lit_R2 = lit_R2.dropna(subset = 'Title')
 print(len(lit_R2), len(lit_R2.columns))"""
 
 ### Sort Papers by Title and directly save the file
-lit_re_R1_fin = flr.choose_by_title(lit_re_R1, 'Title')
-flr.filesave(lit_re_R1_fin, 'LitReview01_Step02',r'/Users/leonhardschonfelder/Desktop/02_Code/Research_02')
+lit_re_R1_fin = foip.choose_by_title(lit_R1, 'Title')
+foip.filesave(lit_re_R1_fin, 'LitReview01_Step02',join(folder_path,'Research_02'))
 
-lit_re_R2_fin = flr.choose_by_title(lit_re_R2, 'Title')
-flr.filesave(lit_re_R2_fin, 'LitReview02_Step02',r'/Users/leonhardschonfelder/Desktop/02_Code/Research_02')
+lit_re_R2_fin = foip.choose_by_title(lit_R2, 'Title')
+foip.filesave(lit_re_R2_fin, 'LitReview02_Step02',join(folder_path,'Research_02'))
 
 

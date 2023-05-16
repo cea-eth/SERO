@@ -7,11 +7,12 @@ import glob2
 import os
 import chardet
 from pathlib import Path
+from os.path import realpath, dirname, join
 # for visualizing
 import matplotlib.pyplot as plt
 import seaborn as sns
 # own
-import Functions_FoIP as frs
+import Functions_FoIP as foip
 
 #------- Goal 2 -------
 # analyze which factors have been assigned to which classes
@@ -25,8 +26,11 @@ import Functions_FoIP as frs
 # cells = #how often factor in class --> sort from up left high to down right low (heat map!)
 
 # File Load
-index_df = pd.read_csv(r'/Users/leonhardschonfelder/Downloads/Results_Interview/Factors_all/IC2_allFactors_de_2.csv', index_col = 0, header = None) # list of all factors index_col = 'Index_Column_Name'
-column_df_de = pd.read_csv(r'/Users/leonhardschonfelder/Downloads/Results_Interview/Classes_all/IC2_allClasses_de_2.csv', index_col = 0, header = None) #list of all classes index_col = 'Columns_Column_Name'
+folder_path = dirname(realpath(__file__))
+print(folder_path)
+
+index_df = pd.read_csv(join(folder_path,'Results_Interview/Factors_all/IC2_allFactors_de_2.csv'), index_col = 0, header = None) # list of all factors index_col = 'Index_Column_Name'
+column_df_de = pd.read_csv(join(folder_path,'Results_Interview/Classes_all/IC2_allClasses_de_2.csv'), index_col = 0, header = None) #list of all classes index_col = 'Columns_Column_Name'
 
 # create df with classes as columns and factors as indexes
 res_fin = pd.DataFrame(index = index_df.index, columns = column_df_de.index)
@@ -34,7 +38,7 @@ res_fin = res_fin.fillna(0)
 column_names = res_fin.columns
 
 # Define the directory where the CSV files are stored
-directory = r'/Users/leonhardschonfelder/Downloads/Results_Interview/Results_Classes'
+directory = join(folder_path,'Results_Interview/Results_Classes')
 
 # Iterate over each file in the directory
 for filename in os.listdir(directory):
@@ -88,8 +92,8 @@ for key in fdd:
 res_fin = res_fin.rename(index = dict_rename)"""
 
 # ----- save file -----
-path_save = r'/Users/leonhardschonfelder/Downloads/Results_Interview'
-frs.filesave(res_fin, 'HeatMap_en', path_save)
+path_save = join(folder_path,'Results_Interview')
+foip.filesave(res_fin, 'HeatMap_en', path_save)
 
 # ----- Plot results -----
 # --- Plot Prepare ---

@@ -5,7 +5,8 @@ import os
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
-import Functions_FoIP as frs
+from os.path import realpath, dirname, join
+import Functions_FoIP as foip
 
 #------- Goal 1 -------
 # analyze which factors have been chosen and how often, which have been discarded?
@@ -14,16 +15,18 @@ import Functions_FoIP as frs
 # create plot for factors (x-axis how often chosen; y-axis factor) using excel
 
 # ----- File Load -----
-dir =os.chdir(r'/Users/leonhardschonfelder/Downloads/Results_Interview/Results_all')
+folder_path = dirname(realpath(__file__))
+
+dir =os.chdir(join(folder_path,'Results_Interview/Results_all'))
 files_path = [os.path.abspath(x) for x in os.listdir()]
 
 #list of all classes
-classes_df_de = pd.read_csv(r'/Users/leonhardschonfelder/Downloads/Results_Interview/Classes_all/IC2_allClasses_de.csv', index_col = 0, header = None)
-classes_df_en = pd.read_csv(r'/Users/leonhardschonfelder/Downloads/Results_Interview/Classes_all/IC2_allClasses_en.csv', index_col = 0, header = None)
+classes_df_de = pd.read_csv(join(folder_path,'Results_Interview/Classes_all/IC2_allClasses_de.csv'), index_col = 0, header = None)
+classes_df_en = pd.read_csv(join(folder_path,'Results_Interview/Classes_all/IC2_allClasses_en.csv'), index_col = 0, header = None)
 
 #list of all factors
-factors_df_de = pd.read_csv(r'/Users/leonhardschonfelder/Downloads/Results_Interview/Factors_all/IC2_allFactors_de.csv', index_col = 0, header = None)
-factors_df_en = pd.read_csv(r'/Users/leonhardschonfelder/Downloads/Results_Interview/Factors_all/IC2_allFactors_en.csv', index_col = 0, header = None)
+factors_df_de = pd.read_csv(join(folder_path,'Results_Interview/Factors_all/IC2_allFactors_de.csv'), index_col = 0, header = None)
+factors_df_en = pd.read_csv(join(folder_path,'Results_Interview/Factors_all/IC2_allFactors_en.csv'), index_col = 0, header = None)
 
 # iterate over path to open files
 csv_file = []
@@ -70,4 +73,4 @@ final_counts = final_counts.rename(index = dict_rename)
 
 print(final_counts)
 # ----- save file -----
-frs.filesave(final_counts,'Interview_Final_Results_en',r'/Users/leonhardschonfelder/Downloads/Results_Interview')
+foip.filesave(final_counts,'Interview_Final_Results_en',join(folder_path,'Results_Interview'))

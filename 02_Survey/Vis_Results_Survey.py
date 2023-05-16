@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import matplotlib.ticker as mticker
-import Functions_FoIP as intfu
+import Functions_FoIP as foip
 from os.path import realpath, dirname, join
 
 #------ FILES SURVEY ------
@@ -19,8 +19,8 @@ res_eng = pd.read_csv(path_dir_en)
 res_de = pd.read_csv(path_dir_de)
 
 # rename columns from de and fr to eng
-eng_fr = intfu.dict_rename(res_fr,res_eng)
-eng_de = intfu.dict_rename(res_de,res_eng)
+eng_fr = foip.dict_rename(res_fr,res_eng)
+eng_de = foip.dict_rename(res_de,res_eng)
 
 res_de = res_de.rename(columns = eng_de)
 res_fr = res_fr.rename(columns = eng_fr)
@@ -62,7 +62,7 @@ res_meta = pd.DataFrame(res_all.iloc[:,0])
 res_general = pd.DataFrame(res_all.iloc[:,2:5])
 
 #building
-res_bd = intfu.prep_plot_df(res_all,None, None,5,19)
+res_bd = foip.prep_plot_df(res_all,None, None,5,19)
 """res_bd = pd.DataFrame(res_all.iloc[:,5:18])
 res_bd_d = dict_rename(res_bd, extract_factor(res_bd))
 res_bd = res_bd.rename(columns = res_bd_d)
@@ -72,7 +72,7 @@ res_bd_ief = pd.DataFrame(res_all.iloc[:,19:21])
 res_bd_rf = pd.DataFrame(res_all.iloc[:,20])"""
 
 #assembly
-res_ass =  intfu.rep_plot_df(res_all,None, None, 21,51)
+res_ass =  foip.rep_plot_df(res_all,None, None, 21,51)
 """res_ass = pd.DataFrame(res_all.iloc[:,21:50])
 res_ass_d = dict_rename(res_ass, extract_factor(res_ass))
 res_ass = res_ass.rename(columns = res_ass_d)
@@ -82,7 +82,7 @@ res_ass_ief = pd.DataFrame(res_all.iloc[:,51:53])
 res_ass_rf = pd.DataFrame(res_all.iloc[:,52])"""
 
 #element
-res_el = intfu.prep_plot_df(res_all, None, None, 53, 97)
+res_el = foip.prep_plot_df(res_all, None, None, 53, 97)
 """res_el = pd.DataFrame(res_all.iloc[:,53:96])
 res_el_d = dict_rename(res_el, extract_factor(res_el))
 res_el = res_el.rename(columns = res_el_d)
@@ -95,9 +95,9 @@ res_el_rf = pd.DataFrame(res_all.iloc[:,98])"""
 res_class = pd.DataFrame(res_all.iloc[:,99])
 
 # SORT DF by Mean
-res_bd = intfu.sort_by_mean(res_bd)
-res_ass = intfu.sort_by_mean(res_ass)
-res_el = intfu.sort_by_mean(res_el)
+res_bd = foip.sort_by_mean(res_bd)
+res_ass = foip.sort_by_mean(res_ass)
+res_el = foip.sort_by_mean(res_el)
 
 # ------ PLOTS LIKERT ------
 # STEPS
@@ -291,15 +291,15 @@ rfont = {'fontname':'Roboto Mono'}
 
 filesave_dir = join(folder_path, "/Results_Survey")
 
-intfu.filesave(intfu.meanofdf(res_bd),'Building_means_sep',filesave_dir)
-intfu.filesave(intfu.meanofdf(res_ass),'Assembly_means_sep',filesave_dir)
-intfu.filesave(intfu.meanofdf(res_el),'Element_means_sep',filesave_dir)
+foip.filesave(foip.meanofdf(res_bd),'Building_means_sep',filesave_dir)
+foip.filesave(foip.meanofdf(res_ass),'Assembly_means_sep',filesave_dir)
+foip.filesave(foip.meanofdf(res_el),'Element_means_sep',filesave_dir)
 
 # GENERAL INFORMATION
 # The relevant columns were exported and then manually visualized, using excel.
 
-"""intfu.filesave(res_meta,'Metadata',filesave_dir)
-intfu.filesave(res_general,'General Information',filesave_dir)"""
+"""foip.filesave(res_meta,'Metadata',filesave_dir)
+foip.filesave(res_general,'General Information',filesave_dir)"""
 
 # ------ ADD / REMOVE FACTORS ------
 # STEPS
@@ -316,11 +316,11 @@ intfu.filesave(res_general,'General Information',filesave_dir)"""
 for i in l_save:
     path = filesave_dir
     if i is res_bd_ief:
-        intfu.filesave(i,'Building',path)
+        foip.filesave(i,'Building',path)
     elif i is res_ass_ief:
-        intfu.filesave(i,'Assembly',path)
+        foip.filesave(i,'Assembly',path)
     elif i is res_el_ief:
-        intfu.filesave(i,'Element',path)"""
+        foip.filesave(i,'Element',path)"""
 
 # ------ CLASSES ------
 # create list with results of Question classification
@@ -334,7 +334,7 @@ for i in l_save:
     # 5. check for dublicates
     # 6. cluster answers according to meaning or similarity
 
-"""intfu.filesave(res_class,'Classes',filesave_dir)"""
+"""foip.filesave(res_class,'Classes',filesave_dir)"""
 
 
 

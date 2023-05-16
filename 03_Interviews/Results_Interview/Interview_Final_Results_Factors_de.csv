@@ -1,0 +1,65 @@
+,0
+Typ / Querschnitt des Profils [3.86],10.0
+"Kosten der Nacharbeit (Reinigung, Wiederaufbereitung etc.) [4.24]",10.0
+#1  Kosten für die Demontage,10.0
+Exposition des Elements [3.76],10.0
+Vorhandensein von Schadstoffen in der Beschichtung des Elements [4.86],10.0
+Menge (Quantität) desselben Elements [4.38],10.0
+Zustand - Beschädigung durch Ermüdung [4.76],10.0
+#1  Länge des Profils/Elements,10.0
+Zustand - Beschädigung durch Feuer [4.71],10.0
+Zustand - Beschädigung durch Korrosion [4.57],10.0
+Zustand - Beschädigung durch Versprödung [4.62],10.0
+Geradheit [3.9],10.0
+Zustand - plastische Verformung [4.71],10.0
+Art der Beschichtung [3.81],9.0
+Vorhandensein von Schadstoffen im Element [4.62],9.0
+Kosten für ein gleichwertiges neues Element [3.9],9.0
+Art der Verbindung des Elements [3.9],9.0
+Zugänglichkeit der Verbindung [4.24],9.0
+Lage im Gebäude [3.67],9.0
+#1  Aufwand der Demontage,9.0
+Zustand - Beschädigung durch Abrieb [4.1],9.0
+#1 Zustand der Beschichtung,9.0
+"Zustand - Vorhandensein von Radioaktivität [""4.86""]",9.0
+Breite des Profils [3.57],9.0
+"Kosten der Prüfung (chemische Zusammensetzung, gefährliche Stoffe...) [3.95]",8.0
+Festigkeit - Klasse [3.76],8.0
+Kosten für den Transport [3.62],8.0
+Dicke des Profils [3.57],8.0
+#1 - Hierarchie des Elements - Abhängigkeit und Beziehung zu anderen Elementen [3.81],8.0
+Höhe des Profils [3.57],8.0
+Graue Energie CO2 / CO2-Äq. Einsparung [3.81],8.0
+#1  verfügbare Dokumentation,8.0
+#1 Gewicht,8.0
+Materialwert [3.76],7.0
+Dehnung [3.71],7.0
+"Andere Maße (Flansch, Steg) des Profils [3.43]",7.0
+Werkstoffgruppe [3.57],7.0
+#2 - Vorhandensein einer Beschichtung [3.48],7.0
+Kosten der Lagerung [3.76],7.0
+Kohlenstoffäquivalenzwert [3.38],7.0
+Zusammensetzung des Beschichtungsmaterials [3.67],7.0
+Festigkeit - Streckgrenze [3.71],7.0
+Festigkeit - Zug [3.71],7.0
+#1- Schweißbarkeit [3.43],7.0
+#1 - Datum der Herstellung (Alter des Elements) [3.38],7.0
+Funktion (Verwendung) des Elements [3.1],6.0
+Gesellschaftlicher (z. B. historischer) Wert [3.29],6.0
+#1 Anpassungsfähigkeit Verwendung für gleiche oder andere Funktion,6.0
+#1 Zerlegbarkeit,6.0
+Chemische Zusammensetzung (Materialzusammensetzung) [3.62],6.0
+#1  Bearbeitbarkeit,6.0
+Alter der Beschichtung [3.29],6.0
+#1 Funktionalität der Verbindungen,5.0
+#1 mögliche Wiederverwendung von Verbindungen,4.0
+Ersetzbarkeit (Ersatzteile) des Elements [3.43],4.0
+#1 Schwingungsanfälligkeit (Vibrationsanfälligkeit),3.0
+#1  Innovationspotenzial,3.0
+#1 Kaskadenpotential,2.0
+"Faktor wurde nochmals hinzugefügt, da dieser als erster Schritt wichtig ist, bevor Reuse überhaupt gemacht werden kann",1.0
+Eigentümer*in,1.0
+3,1.0
+#1Kooperation mit Eigentümerin/Rückebauer/Baumanagerin,1.0
+1,1.0
+2,1.0

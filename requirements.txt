@@ -9,3 +9,4 @@ glob2
 matplotlib
 chardet
 seaborn
+xlrd

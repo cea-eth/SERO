@@ -1,0 +1,65 @@
+,0
+Type / Section of profile [3.86],10.0
+"Kosten der Nacharbeit (Reinigung, Wiederaufbereitung etc.) [4.24]",10.0
+#1 - cost of disassembly,10.0
+Exposition of element [3.76],10.0
+Presence of hazardous substances in coating of element [4.86],10.0
+Amount (quantity) of same element [4.38],10.0
+Condition - damage due to fatigue [4.76],10.0
+#1 - length of the profile/ element,10.0
+Condition - damage due to fire [4.71],10.0
+Condition - damage due to corrosion [4.57],10.0
+Condition - damage due to embrittlement [4.62],10.0
+Straightness [3.9],10.0
+Condition - plastic deformation [4.71],10.0
+Coating type [3.81],9.0
+Presence of hazardous substances in element [4.62],9.0
+Cost of equivalent new element [3.9],9.0
+Type of connection of element [3.9],9.0
+Accessibility of connection [4.24],9.0
+Location in Building [3.67],9.0
+#1 - effort of disassembly,9.0
+Condition - damage due to abrasion [4.1],9.0
+#1 -condition of the coating,9.0
+Condition - presence of radioactivity [4.81],9.0
+Width of profile [3.57],9.0
+"Kosten der Prüfung (chemische Zusammensetzung, gefährliche Stoffe...) [3.95]",8.0
+Strength - class [3.76],8.0
+Cost of transport [3.62],8.0
+Thickness of profile [3.57],8.0
+#1 - Hierarchy of element - Dependance and relation to other elements [3.81],8.0
+Height of profile [3.57],8.0
+Embodied CO2 / CO2 eq. Saving [3.81],8.0
+#1 - available documentation,8.0
+#1 -weight,8.0
+Material value [3.76],7.0
+Elongation [3.71],7.0
+"Andere Maße (Flansch, Steg) des Profils [3.43]",7.0
+Material Group [3.57],7.0
+#2 - Presence of coating [3.48],7.0
+Cost of storage [3.76],7.0
+Carbon equivalent value [3.38],7.0
+Coating material composition [3.67],7.0
+Strength - yield [3.71],7.0
+Strength - tensile [3.71],7.0
+#1- Weldability [3.43],7.0
+#1 - Date of production (age of element) [3.38],7.0
+Function (use) of element [3.1],6.0
+Social (e.g. historic) value [3.29],6.0
+#1 - adaptability - use for same or other function,6.0
+#1 - dismantlability,6.0
+Chemical composition (material composition) [3.62],6.0
+#1 - machinability (bearbeitbarkeit),6.0
+Coating age [3.29],6.0
+#1 - possible reuse of connections,5.0
+#1 -functionality of connections,4.0
+Replacability (spare parts) of elements [3.43],4.0
+#1 -susceptibility to vibration (schwingungsanfälligkeit);,3.0
+#1 - innovation potential,3.0
+#1 -cascading potentials,2.0
+"Faktor wurde nochmals hinzugefügt, da dieser als erster Schritt wichtig ist, bevor Reuse überhaupt gemacht werden kann",1.0
+Eigentümer*in,1.0
+3,1.0
+#1Kooperation mit Eigentümerin/Rückebauer/Baumanagerin,1.0
+1,1.0
+2,1.0

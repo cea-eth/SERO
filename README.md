@@ -14,6 +14,7 @@ A semi-structured literature research was conducted to investigate the research 
 
 The literature proposed on Scopus and Web of Science was exported as csv-file. It was then merged, sorted, dublicates were deleted (Step01) and finally sorted again by title (Step02) and abstract (Step03).
 
+The code to sort the literature was inspired by the work of Kira Kulik.
 
 # <a name="Survey_Analysis"></a>Survey Analysis
 
