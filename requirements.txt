@@ -5,6 +5,7 @@ argparse
 owlready2
 pandas
 numpy
-glob
-os
-matplotlib.pyplot
+glob2
+matplotlib
+chardet
+seaborn

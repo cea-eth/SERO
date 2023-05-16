@@ -3,101 +3,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import matplotlib.ticker as mticker
-
-#------ FUNCTIONS ------
-def filesave(DataFrame,Filename,Path):
-
-    if isinstance(Filename, str):
-        filename = Filename
-        path = Path + '/' + filename + '.csv'
-        DataFrame.to_csv(path)
-    else:
-        filename = str(Filename)
-        path = Path + '/' + filename + '.csv'
-        DataFrame.to_csv(path)
-
-    return print('DataFrame is written to csv File successfully.')
-def dict_rename(obj01,obj02):
-    # creates dictionnary to rename columns of dataframes
-    # key from obj01, value from obj02 - rename works from key to value
-
-    if isinstance(obj01, pd.DataFrame):
-        l01 = list(obj01.columns)
-    elif isinstance(obj01, list):
-        l01 = obj01
-
-    if isinstance(obj02, pd.DataFrame):
-        l02 = list(obj02.columns)
-    elif isinstance(obj02, list):
-        l02 = obj02
-
-    dict_rename = {}
-
-    dict_rename = {}
-    for key in l01:
-        for value in l02:
-            dict_rename[key] = value
-            l02.remove(value)
-            break
-
-    return dict_rename
-def num_column(dataframe):
-    df = dataframe
-
-    for i in list(df.columns):
-        df[i] = pd.to_numeric(df[i])
-
-    return df
-def extract_factor(DataFrame):
-    # create list with factors to replace column header of dataframe with factors intead of long text
-    df = DataFrame
-    l_df = list(df.columns)
-    l_df_r = []
-
-    for i in l_df:
-        if '[' in i:
-            l_df_r.append(i.split('[')[1].strip()[:-1])
-        else:
-            continue
-
-    return l_df_r
-def prep_plot_df(DataFrame_origin,row_start,row_end,column_start,column_end):
-    #rename
-    dfo, rs, re, cs, ce = DataFrame_origin, row_start, row_end, column_start, column_end
-
-    df_r = pd.DataFrame(dfo.iloc[rs:re, cs:ce])
-    df_ex = extract_factor(df_r)
-    df_dic = dict_rename(df_r,df_ex)
-    df_r = df_r.rename(columns = df_dic)
-    df_r = num_column(df_r)
-
-    return df_r
-def search_keyword(dataframe, keyword,):
-    ## search for keywords in column to partition answers / questions
-    # returns range with
-    return
-def sort_by_mean(df):
-    df_index = df.mean().sort_values().index
-    df = df[df_index]
-    return df
-def meanofdf (df):
-
-    mean_value = []
-    for j in df.columns:
-        mean_value.append(df.loc[:,j].mean())
-
-    df_c_list = list(df.columns)
-    """df_n = []
-
-    for i in range(0,len(df_c_list)):
-        df_n.append(str(df_c_list[i]) + ' [' + str(round(mean_value[i],2)) + ']')"""
-
-    df_n = pd.DataFrame(list(zip(df_c_list,mean_value)), columns = ['Name', 'mean'])
-
-    return df_n
+import Interview_functions as intfu
+from os.path import realpath, dirname, join
 
 #------ FILES SURVEY ------
 # import csv files #
+
+folder_path = dirname(realpath(__file__))
+path_dir = join(folder_path, "SERO_ont")
 
 res_fr = pd.read_csv(
     r"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey/Formalisation des processus d'inventaire (Responses) - Form responses 1.csv")
@@ -107,8 +20,8 @@ res_de = pd.read_csv(
     r"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey/Formalisierung von Inventarisierungsprozessen (Responses) - Form responses 1.csv")
 
 # rename columns from de and fr to eng
-eng_fr = dict_rename(res_fr,res_eng)
-eng_de = dict_rename(res_de,res_eng)
+eng_fr = intfu.dict_rename(res_fr,res_eng)
+eng_de = intfu.dict_rename(res_de,res_eng)
 
 res_de = res_de.rename(columns = eng_de)
 res_fr = res_fr.rename(columns = eng_fr)
@@ -150,7 +63,7 @@ res_meta = pd.DataFrame(res_all.iloc[:,0])
 res_general = pd.DataFrame(res_all.iloc[:,2:5])
 
 #building
-res_bd = prep_plot_df(res_all,None, None,5,19)
+res_bd = intfu.prep_plot_df(res_all,None, None,5,19)
 """res_bd = pd.DataFrame(res_all.iloc[:,5:18])
 res_bd_d = dict_rename(res_bd, extract_factor(res_bd))
 res_bd = res_bd.rename(columns = res_bd_d)
@@ -160,7 +73,7 @@ res_bd_ief = pd.DataFrame(res_all.iloc[:,19:21])
 res_bd_rf = pd.DataFrame(res_all.iloc[:,20])"""
 
 #assembly
-res_ass =  prep_plot_df(res_all,None, None, 21,51)
+res_ass =  intfu.rep_plot_df(res_all,None, None, 21,51)
 """res_ass = pd.DataFrame(res_all.iloc[:,21:50])
 res_ass_d = dict_rename(res_ass, extract_factor(res_ass))
 res_ass = res_ass.rename(columns = res_ass_d)
@@ -170,7 +83,7 @@ res_ass_ief = pd.DataFrame(res_all.iloc[:,51:53])
 res_ass_rf = pd.DataFrame(res_all.iloc[:,52])"""
 
 #element
-res_el = prep_plot_df(res_all, None, None, 53, 97)
+res_el = intfu.prep_plot_df(res_all, None, None, 53, 97)
 """res_el = pd.DataFrame(res_all.iloc[:,53:96])
 res_el_d = dict_rename(res_el, extract_factor(res_el))
 res_el = res_el.rename(columns = res_el_d)
@@ -183,9 +96,9 @@ res_el_rf = pd.DataFrame(res_all.iloc[:,98])"""
 res_class = pd.DataFrame(res_all.iloc[:,99])
 
 # SORT DF by Mean
-res_bd = sort_by_mean(res_bd)
-res_ass = sort_by_mean(res_ass)
-res_el = sort_by_mean(res_el)
+res_bd = intfu.sort_by_mean(res_bd)
+res_ass = intfu.sort_by_mean(res_ass)
+res_el = intfu.sort_by_mean(res_el)
 
 # ------ PLOTS LIKERT ------
 # STEPS
@@ -377,24 +290,26 @@ rfont = {'fontname':'Roboto Mono'}
 
 # Add mean behind factor and export to csv
 
-filesave(meanofdf(res_bd),'Building_means_sep',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
-filesave(meanofdf(res_ass),'Assembly_means_sep',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
-filesave(meanofdf(res_el),'Element_means_sep',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
+intfu.filesave(intfu.meanofdf(res_bd),'Building_means_sep',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
+intfu.filesave(intfu.meanofdf(res_ass),'Assembly_means_sep',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
+intfu.filesave(intfu.meanofdf(res_el),'Element_means_sep',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
 
 # GENERAL INFORMATION
+# The relevant columns were exported and then manually visualized, using excel.
 
-#filesave(res_meta,'Metadata',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
-#filesave(res_general,'General Information',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
+"""filesave(res_meta,'Metadata',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
+filesave(res_general,'General Information',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")"""
 
 # ------ ADD / REMOVE FACTORS ------
 # STEPS
     # 1. translate answers to english and check for translation-errors (API Deepl?)
-    # 2. check for synonyms (NLP or manually) + shorten if possible
+    # 2. check for synonyms + shorten if possible
     # 3. check for dublicates
     # 4. create list with factors which should be added on
         # Building Level
         # Assembly Level
         # Element Level
+    # 5. finally, the relevant columns were exported and then manually sorted and visualized, using excel.
 
 """l_save = [res_bd_ief, res_ass_ief, res_el_ief]
 for i in l_save:
@@ -407,18 +322,19 @@ for i in l_save:
         filesave(i,'Element',path)"""
 
 # ------ CLASSES ------
-# create list/ wordcloud with results of Question classification (https://towardsdatascience.com/how-to-make-word-clouds-in-python-that-dont-suck-86518cdcb61f)
+# create list with results of Question classification
+# finally, the relevant columns were exported and then manually sorted and visualized, using excel.
+
 # STEPS
     # 1. manually separate the classes
     # 2. translate answers to english and check for translation-errors
-    # 3. only keep subjects (NLP) if wordcloud
-    # 4. check for synonyms (NLP or manually)
-    # 5. check for dublicates (?) OR create wordcloud
+    # 3. only keep subjects
+    # 4. check for synonyms
+    # 5. check for dublicates
     # 6. cluster answers according to meaning or similarity
 
-#filesave(res_class,'Classes',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
+"""filesave(res_class,'Classes',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")"""
 
-# start when file manually cleaned
-# res_class_c = pd.read_csv(r"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey/Classes_cleaned.csv")
+
 
 

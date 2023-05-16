@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 # for import of files
-import glob
+import glob2
 import os
 import chardet
 from pathlib import Path
