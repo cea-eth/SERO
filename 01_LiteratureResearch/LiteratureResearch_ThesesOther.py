@@ -3,7 +3,7 @@
 
 import pandas as pd
 import numpy as np
-import FunctionsLitRe as flr
+import Functions_FoIP as flr
 
 """### Get data from Excel and convert to Dataframe
 

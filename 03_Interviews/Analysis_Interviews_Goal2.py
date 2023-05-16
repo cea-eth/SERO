@@ -11,7 +11,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import seaborn as sns
 # own
-import functions_results_survey as frs
+import Functions_FoIP as frs
 
 #------- Goal 2 -------
 # analyze which factors have been assigned to which classes

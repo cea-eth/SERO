@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
-import functions_results_survey as frs
+import Functions_FoIP as frs
 
 #------- Goal 1 -------
 # analyze which factors have been chosen and how often, which have been discarded?

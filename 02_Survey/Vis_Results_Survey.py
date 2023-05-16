@@ -3,21 +3,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import matplotlib.ticker as mticker
-import Interview_functions as intfu
+import Functions_FoIP as intfu
 from os.path import realpath, dirname, join
 
 #------ FILES SURVEY ------
 # import csv files #
 
 folder_path = dirname(realpath(__file__))
-path_dir = join(folder_path, "SERO_ont")
+path_dir_fr = join(folder_path, "Results_Survey/Formalisation des processus d'inventaire (Responses) - Form responses 1.csv")
+path_dir_en = join(folder_path, "Results_Survey/Formalization of inventory processes (Responses) - Form responses 1.csv")
+path_dir_de= join(folder_path, "Results_Survey/Formalisierung von Inventarisierungsprozessen (Responses) - Form responses 1.csv")
 
-res_fr = pd.read_csv(
-    r"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey/Formalisation des processus d'inventaire (Responses) - Form responses 1.csv")
-res_eng = pd.read_csv(
-    r"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey/Formalization of inventory processes (Responses) - Form responses 1.csv")
-res_de = pd.read_csv(
-    r"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey/Formalisierung von Inventarisierungsprozessen (Responses) - Form responses 1.csv")
+res_fr = pd.read_csv(path_dir_fr)
+res_eng = pd.read_csv(path_dir_en)
+res_de = pd.read_csv(path_dir_de)
 
 # rename columns from de and fr to eng
 eng_fr = intfu.dict_rename(res_fr,res_eng)
@@ -290,15 +289,17 @@ rfont = {'fontname':'Roboto Mono'}
 
 # Add mean behind factor and export to csv
 
-intfu.filesave(intfu.meanofdf(res_bd),'Building_means_sep',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
-intfu.filesave(intfu.meanofdf(res_ass),'Assembly_means_sep',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
-intfu.filesave(intfu.meanofdf(res_el),'Element_means_sep',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
+filesave_dir = join(folder_path, "/Results_Survey")
+
+intfu.filesave(intfu.meanofdf(res_bd),'Building_means_sep',filesave_dir)
+intfu.filesave(intfu.meanofdf(res_ass),'Assembly_means_sep',filesave_dir)
+intfu.filesave(intfu.meanofdf(res_el),'Element_means_sep',filesave_dir)
 
 # GENERAL INFORMATION
 # The relevant columns were exported and then manually visualized, using excel.
 
-"""filesave(res_meta,'Metadata',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")
-filesave(res_general,'General Information',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")"""
+"""intfu.filesave(res_meta,'Metadata',filesave_dir)
+intfu.filesave(res_general,'General Information',filesave_dir)"""
 
 # ------ ADD / REMOVE FACTORS ------
 # STEPS
@@ -313,13 +314,13 @@ filesave(res_general,'General Information',"/Users/leonhardschonfelder/Downloads
 
 """l_save = [res_bd_ief, res_ass_ief, res_el_ief]
 for i in l_save:
-    path = r"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey"
+    path = filesave_dir
     if i is res_bd_ief:
-        filesave(i,'Building',path)
+        intfu.filesave(i,'Building',path)
     elif i is res_ass_ief:
-        filesave(i,'Assembly',path)
+        intfu.filesave(i,'Assembly',path)
     elif i is res_el_ief:
-        filesave(i,'Element',path)"""
+        intfu.filesave(i,'Element',path)"""
 
 # ------ CLASSES ------
 # create list with results of Question classification
@@ -333,7 +334,7 @@ for i in l_save:
     # 5. check for dublicates
     # 6. cluster answers according to meaning or similarity
 
-"""filesave(res_class,'Classes',"/Users/leonhardschonfelder/Downloads/02_Code/Results_Survey")"""
+"""intfu.filesave(res_class,'Classes',filesave_dir)"""
 
 
 
