@@ -12,7 +12,9 @@ The transition to a circular economy and the closure of material loops in the co
 
 A semi-structured literature research was conducted to investigate the research field. Two distinct research approaches were established to locate relevant literature pertaining to each of the research questions.
 
-The literature proposed on Scopus and Web of Science was exported as csv-file. It was then merged, sorted, dublicates were deleted (Step01) and finally sorted again by title (Step02) and abstract (Step03).
+The literature identified from Scopus and Web of Science was exported as a CSV file. Subsequently, the data was merged, sorted, and duplicates were removed (Step01). The literature was then sorted again based on title (Step02) and abstract (Step03). The same process was applied to the literature obtained from other master theses.
+
+The finalized collection of literature can be found in 01_Literature Research/Research_02. Nevertheless, additional literature was reviewed subsequently.
 
 The code to sort the literature was inspired by the work of Kira Kulik.
 
