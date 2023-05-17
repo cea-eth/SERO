@@ -674,6 +674,8 @@
     <!-- http://www.sero.org/SteelElementReuseOntology#Activity -->
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Activity">
+        <term:description xml:lang="en">A process that is intentionally performed by an agent.</term:description>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/digitalconstruction/0.5/Processes"/>
         <rdfs:label xml:lang="en">Activity</rdfs:label>
     </owl:Class>
     
@@ -691,6 +693,9 @@
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Beam-BEAM">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#BuildingElement"/>
+        <rdfs:comment xml:lang="en">A horizontal, or nearly horizontal, structural member that is capable of withstanding load primarily by resisting bending. It represents such a member from an architectural point of view. It is not required to be load bearing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://pi.pauwel.be/voc/buildingelement"/>
+        <rdfs:label xml:lang="en">Beam</rdfs:label>
     </owl:Class>
     
 
@@ -716,7 +721,7 @@
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#CEMarking">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Documentation"/>
         <rdfs:comment xml:lang="en">The CE (Conformité Européenne) mark, is an authentication symbol for products that can be legally sold in Europe. The CE mark ostensibly means that the product manufacturer(s) take responsibility for each products’ compliance with European Directives.</rdfs:comment>
-        <rdfs:label>CE Marking</rdfs:label>
+        <rdfs:label xml:lang="en">CE Marking</rdfs:label>
     </owl:Class>
     
 
@@ -726,6 +731,7 @@
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Causation">
         <rdfs:comment xml:lang="en">Represents the causation of a damage.
 Should be extended with domain-specific subclasses.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
         <rdfs:label xml:lang="en">Causation</rdfs:label>
     </owl:Class>
     
@@ -736,7 +742,6 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ChemicalDamage">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ClassifiedDamage"/>
         <rdfs:comment xml:lang="en">Damage that is caused by chemical reactions in the concrete material or the reinforcement.</rdfs:comment>
-        <rdfs:comment>cdo</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/damagemodels/cdo#</rdfs:isDefinedBy>
         <rdfs:label>Chemical Damage</rdfs:label>
     </owl:Class>
@@ -758,6 +763,8 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ChemicalDamage"/>
+        <rdfs:comment xml:lang="en">Corrosion is a natural process that converts a refined metal into a more chemically stable oxide. It is the gradual deterioration of materials (usually a metal) by chemical or electrochemical reaction with their environment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Chemical Damage Corrosion</rdfs:label>
     </owl:Class>
     
 
@@ -769,6 +776,7 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
         <owl:disjointWith rdf:resource="http://www.sero.org/SteelElementReuseOntology#UnclassifiedDamage"/>
         <rdfs:comment xml:lang="en">A damage classification is used to denote the kind of damage. Subclasses of this class are defined in extensions 
 			  such as CDO (Concrete Damage Ontology), NSO (the Natural Stone Ontology), etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
         <rdfs:label xml:lang="en">Classified Damage</rdfs:label>
     </owl:Class>
     
@@ -776,7 +784,11 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
 
     <!-- http://www.sero.org/SteelElementReuseOntology#Damage -->
 
-    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Damage"/>
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Damage">
+        <rdfs:comment xml:lang="en">Damage is the harm to a structure resulting in impairment or loss of function, usefulness or value. Instead of using dot:Damage, it is recommended to use one subclass of dot:Damage for respectively the damage topology (either dot:DamageArea or dot:DamageElement), the potential structural impact (either dot:StructuralDamage or dot:Defect) and the damage classification (either dot:UnclassifiedDamage or subclasses of dot:ClassifiedDamage).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
+        <rdfs:label xml:lang="en">Damage</rdfs:label>
+    </owl:Class>
     
 
 
@@ -784,6 +796,9 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Documentation"/>
+        <rdfs:comment xml:lang="en">Material or data that provides information or evidence about the structure and its components or that serves as a record. Should only be used for damage-related documentation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
+        <rdfs:label xml:lang="en">Damage Documentation</rdfs:label>
     </owl:Class>
     
 
@@ -795,6 +810,7 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
         <owl:disjointWith rdf:resource="http://www.sero.org/SteelElementReuseOntology#StructuralDamage"/>
         <rdfs:comment xml:lang="en">Should be used on nodes that are already classified as dot:DamageArea or dot:DamageElement.
 Damage that does not impair the structural integrity of the structure, but can still have influence on the durability, usability and / or value.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
         <rdfs:label xml:lang="en">Defect</rdfs:label>
     </owl:Class>
     
@@ -865,6 +881,9 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Inspection">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Activity"/>
+        <rdfs:comment xml:lang="en">Careful examination or scrutiny in which an existing construction or a part of it is inspected and detected damages are recorded. Should be repeated at regular time intervals.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
+        <rdfs:label xml:lang="en">Inspection</rdfs:label>
     </owl:Class>
     
 
@@ -874,6 +893,7 @@ Damage that does not impair the structural integrity of the structure, but can s
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Inspector">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Person"/>
         <rdfs:comment xml:lang="en">A person who inspects constructions (for damages) or whose task it is to carry out inspections on constructions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
         <rdfs:label xml:lang="en">Inspector</rdfs:label>
     </owl:Class>
     
@@ -891,7 +911,8 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Material">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#MaterialEntity"/>
-        <term:description>a homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). [ISO 16739]</term:description>
+        <rdfs:comment xml:lang="en">a homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). [ISO 16739]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials"/>
         <rdfs:label xml:lang="en">Material</rdfs:label>
     </owl:Class>
     
@@ -899,7 +920,11 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <!-- http://www.sero.org/SteelElementReuseOntology#MaterialEntity -->
 
-    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#MaterialEntity"/>
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#MaterialEntity">
+        <rdfs:comment xml:lang="en">MaterialEntity is equivalent to the BFO class &apos;material entity&apos; (http://purl.obolibrary.org/obo/BFO_0000040)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities"/>
+        <rdfs:label xml:lang="en">Material Entity</rdfs:label>
+    </owl:Class>
     
 
 
@@ -925,6 +950,7 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#MetallicMaterial">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Material"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials"/>
         <rdfs:label>MetallicMaterial</rdfs:label>
     </owl:Class>
     
@@ -967,8 +993,9 @@ Damage that does not impair the structural integrity of the structure, but can s
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#NonReusable"/>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:comment>A steel beam that does not meet the necessary requirements for reuse.</rdfs:comment>
+        <rdfs:label xml:lang="en">Non Reusabel Steel Beam</rdfs:label>
     </owl:Class>
     
 
@@ -1001,6 +1028,7 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Person">
         <rdfs:comment xml:lang="en">The foaf:Person class represents people. Something is a foaf:Person if it is a person. We don&apos;t nitpic about whether they&apos;re alive, dead, real, or imaginary. The foaf:Person class is a sub-class of the foaf:Agent class, since all people are considered &apos;agents&apos; in FOAF.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1"/>
         <rdfs:label xml:lang="en">Person - A person</rdfs:label>
     </owl:Class>
     
@@ -1031,6 +1059,8 @@ Damage that does not impair the structural integrity of the structure, but can s
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#PhysicalDamage"/>
+        <rdfs:comment xml:lang="en">Abrasion is the process of scuffing, scratching, wearing down, marring, or rubbing away. It can be intentionally imposed in a controlled process using an abrasive. Abrasion can be an undesirable effect of exposure to normal use or exposure to the elements.</rdfs:comment>
+        <rdfs:label xml:lang="en">Abrasion</rdfs:label>
     </owl:Class>
     
 
@@ -1050,6 +1080,8 @@ Damage that does not impair the structural integrity of the structure, but can s
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#PhysicalDamageRadiation"/>
+        <rdfs:comment xml:lang="en">Embrittlement is a significant decrease of ductility of a material, which makes the material brittle. Embrittlement is used to describe any phenomena where the environment compromises a stressed material&apos;s mechanical performance, such as temperature or environmental composition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Embrittlement</rdfs:label>
     </owl:Class>
     
 
@@ -1100,6 +1132,8 @@ Damage that does not impair the structural integrity of the structure, but can s
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#PhysicalDamageFatigue"/>
+        <rdfs:comment xml:lang="en">A Deformation that is not undone simply by removing the applied force</rdfs:comment>
+        <rdfs:label xml:lang="en">Plastic Deformation</rdfs:label>
     </owl:Class>
     
 
@@ -1167,9 +1201,7 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfilePartFlange">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfilePart"/>
-        <rdfs:comment xml:lang="en">A flange is a projecting ridge, rim, collar or ring on an object such as a column, beam, pipe and so on that provides additional strength or stiffness or additional surface area for the attachment of, or to, another object.
-
-Horizontal element of a beam, resisting most of the bending moment.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A flange is a projecting ridge, rim, collar or ring on an object such as a column, beam, pipe and so on that provides additional strength or stiffness or additional surface area for the attachment of, or to, another object. - Horizontal element of a beam, resisting most of the bending moment.</rdfs:comment>
         <rdfs:label>Flange</rdfs:label>
     </owl:Class>
     
@@ -1272,6 +1304,8 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:comment xml:lang="en">A steel beam that does meet the necessary requirements for reuse.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reusable Steel Beam</rdfs:label>
     </owl:Class>
     
 
@@ -1280,6 +1314,8 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Reuse-Expert">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Person"/>
+        <rdfs:comment xml:lang="en">A person who possess the expertise to identify and evaluate reusable products, while engaging with various stakeholders involved in architectural projects, including architects, contractors, and clients.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reuse Expert</rdfs:label>
     </owl:Class>
     
 
@@ -1288,6 +1324,7 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseAudit">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Activity"/>
+        <rdfs:comment xml:lang="en">A reclamation audit is an operation carried out in buildings scheduled for partial or total demolition. It aims at identifying the building materials and products presenting a high reuse potential. This audit results in a ‘reclamation inventory’.</rdfs:comment>
         <rdfs:label xml:lang="en">Reuse Audit</rdfs:label>
     </owl:Class>
     
@@ -1375,6 +1412,7 @@ sharp-edged L, U and T profiles, profiles for caterpillar tracks, etc. [DIN EN 1
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Beam-BEAM"/>
+        <rdfs:comment xml:lang="en">A horizontal, or nearly horizontal, structural member made of steel that is capable of withstanding load primarily by resisting bending. It represents such a member from an architectural point of view. It is not required to be load bearing.</rdfs:comment>
         <rdfs:label xml:lang="en">Steel Beam</rdfs:label>
     </owl:Class>
     
@@ -1384,6 +1422,8 @@ sharp-edged L, U and T profiles, profiles for caterpillar tracks, etc. [DIN EN 1
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Causation"/>
+        <rdfs:comment xml:lang="en">Describes the occurrence of damage that can affect steel elements.</rdfs:comment>
+        <rdfs:label xml:lang="en">Steel Damage Causation</rdfs:label>
     </owl:Class>
     
 
@@ -1394,6 +1434,7 @@ sharp-edged L, U and T profiles, profiles for caterpillar tracks, etc. [DIN EN 1
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage"/>
         <rdfs:comment xml:lang="en">Should be used on nodes that are already classified as dot:DamageArea, dot:DamagePattern or dot:DamageElement.
 Damage that impairs the structural integrity of the structure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
         <rdfs:label xml:lang="en">Structural Damage</rdfs:label>
     </owl:Class>
     
@@ -1438,6 +1479,7 @@ Damage that impairs the structural integrity of the structure.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage"/>
         <rdfs:comment xml:lang="en">A dot:Damage instance that is not further classified with domain-specific classes (subclasses of dot:ClassifiedDamage). 
 This class can be used in cases where the damage classification is unknown.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
         <rdfs:label xml:lang="en">Unclassified Damage</rdfs:label>
     </owl:Class>
     
