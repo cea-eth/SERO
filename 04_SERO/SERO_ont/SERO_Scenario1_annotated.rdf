@@ -685,6 +685,8 @@
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#AdequacyTestingDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation"/>
+        <rdfs:comment xml:lang="en">Steel usually has to be certified, i.e. actual material properties have to be evaluated against the material performance requirements. In the absence of such certificates, material testing through appropriate sampling and testing method(s) should be carried out to demonstrate the adequacy of the material.</rdfs:comment>
+        <rdfs:label xml:lang="en">Adequacy Testing Documentation</rdfs:label>
     </owl:Class>
     
 
@@ -704,6 +706,9 @@
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#BuildingElement">
         <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
+        <rdfs:comment>Comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system. Building elements are all physically existent and tangible things.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://pi.pauwel.be/voc/buildingelement"/>
+        <rdfs:label xml:lang="en">Building Element</rdfs:label>
     </owl:Class>
     
 
@@ -712,6 +717,9 @@
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#BuildingObject">
         <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
+        <rdfs:comment xml:lang="en">An entity that forms a part of an existing or designed building</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities"/>
+        <rdfs:label xml:lang="en">Building Object</rdfs:label>
     </owl:Class>
     
 
@@ -763,7 +771,7 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ChemicalDamage"/>
-        <rdfs:comment xml:lang="en">Corrosion is a natural process that converts a refined metal into a more chemically stable oxide. It is the gradual deterioration of materials (usually a metal) by chemical or electrochemical reaction with their environment.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Corrosion is a natural process that converts a refined metal into a more chemically stable oxide. It is the gradual deterioration of materials (usually a metal) by chemical or electrochemical reaction with their environment. Steel elements sowing a significant loss of their cross section due to corrosion should not be reused.</rdfs:comment>
         <rdfs:label xml:lang="en">Chemical Damage Corrosion</rdfs:label>
     </owl:Class>
     
@@ -820,6 +828,9 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Description">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation"/>
+        <rdfs:comment xml:lang="en">Short textual documentation about a Damage or Structure Element. Generally created by the inspecting person.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
     </owl:Class>
     
 
@@ -834,6 +845,9 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ExternalResource">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation"/>
+        <rdfs:comment xml:lang="en">Document that is stored in a separate file, referenced by an external path.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot"/>
+        <rdfs:label xml:lang="en">External Resource</rdfs:label>
     </owl:Class>
     
 
@@ -942,6 +956,9 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#MaterialObjectStructure">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#BuildingObject"/>
+        <rdfs:comment xml:lang="en">A concept to represent material related information that has material related properties</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials"/>
+        <rdfs:label xml:lang="en">Material Object Structure</rdfs:label>
     </owl:Class>
     
 
@@ -960,6 +977,8 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#NewCEMarking">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#CEMarking"/>
+        <rdfs:comment xml:lang="en">Recertification of steel products to confirm that a steel product meets the specified properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">New CE Marking</rdfs:label>
     </owl:Class>
     
 
@@ -1004,6 +1023,7 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#OriginalCEMarking">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#CEMarking"/>
+        <rdfs:label xml:lang="en">Original CE Marking</rdfs:label>
     </owl:Class>
     
 
@@ -1012,6 +1032,8 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#OriginalMaterialDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Documentation"/>
+        <rdfs:comment xml:lang="en">EN 10204 defines the different types of material documents that include Type 2.1, 2.2, 3.1 and 3.2 certificates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Original Material Documentation</rdfs:label>
     </owl:Class>
     
 
@@ -1020,6 +1042,8 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#OriginalTestCertificatesDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Documentation"/>
+        <rdfs:comment xml:lang="en">EN 10204 defines the different types of material documents that include Type 2.1, 2.2, 3.1 and 3.2 certificates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Origintal Test Certificate</rdfs:label>
     </owl:Class>
     
 
@@ -1105,6 +1129,8 @@ Damage that does not impair the structural integrity of the structure, but can s
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#PhysicalDamage"/>
+        <rdfs:comment xml:lang="en">Fatigue is the initiation and propagation of cracks in a material due to cyclic loading. Steel Elements subject to fatigue should not be reclaimed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Damage Fatigue</rdfs:label>
     </owl:Class>
     
 
@@ -1153,6 +1179,8 @@ Damage that does not impair the structural integrity of the structure, but can s
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#PhysicalDamage"/>
+        <rdfs:comment xml:lang="en">Radioactive contamination, is the deposition of, or presence of radioactive substances on surfaces where their presence is unintended or undesirable. Building elements subject to radiation should not be reused.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Damage Radiation</rdfs:label>
     </owl:Class>
     
 
@@ -1173,6 +1201,7 @@ Damage that does not impair the structural integrity of the structure, but can s
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#MaterialObjectStructure"/>
         <term:description>Profile is a single and identifiable cross section of an element which is constructed of a number of profiles (one or more) (Source:IFC).</term:description>
+        <rdfs:comment rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials"/>
         <rdfs:label xml:lang="en">Profile</rdfs:label>
     </owl:Class>
     
@@ -1222,6 +1251,7 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShape">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#MaterialObjectStructure"/>
+        <rdfs:label xml:lang="en">Profile Shape</rdfs:label>
     </owl:Class>
     
 
@@ -1278,6 +1308,8 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReliabilityTestingDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation"/>
+        <rdfs:comment xml:lang="en">The reliability assessment is to ensure that the steel products are manufactured under stringent quality assurance system and that it meets the quality assurance requirements.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reliability Testing Documentation</rdfs:label>
     </owl:Class>
     
 
@@ -1343,6 +1375,8 @@ Damage that does not impair the structural integrity of the structure, but can s
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassASteelBeam">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusableSteelBeam"/>
         <owl:disjointWith rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseClassBSteelBeam"/>
+        <rdfs:comment xml:lang="en">Steel Elements classified as Class A Steel elements, have available original material test certificates which constitute evidence of conformity with the relevant product standard.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reuse Class A Steel Beam</rdfs:label>
     </owl:Class>
     
 
@@ -1359,6 +1393,8 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassBSteelBeam">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusableSteelBeam"/>
+        <rdfs:comment xml:lang="en">Steel Elements classified as Class B Steel elements, don&apos;t have available original material test certificates. A comprehensive testing protocol is applied.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reuse Class B Steel Beam</rdfs:label>
     </owl:Class>
     
 
@@ -1375,6 +1411,8 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassCSteelBeam">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusableSteelBeam"/>
+        <rdfs:comment xml:lang="en">Steel Elements classified as Class C Steel elements, don&apos;t have available original material test certificates. No testing is applied. Most conservative steel grade in accordance with structure age and location is adopted.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reuse Class C Steel Beam</rdfs:label>
     </owl:Class>
     
 
@@ -1448,19 +1486,12 @@ Damage that impairs the structural integrity of the structure.</rdfs:comment>
     
 
 
-    <!-- http://www.sero.org/SteelElementReuseOntology#TechnicalDocumentation -->
-
-    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#TechnicalDocumentation">
-        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Documentation"/>
-        <rdfs:label xml:lang="en">Profile Documentation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation -->
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Documentation"/>
+        <rdfs:comment xml:lang="en">Documentation of testing of steel elements, for recertification of steel products to confirm that a steel product meets the specified properties. Recertification inlcudes nondestructive and destructive testing.</rdfs:comment>
+        <rdfs:label xml:lang="en">Testing Protocol Documentation</rdfs:label>
     </owl:Class>
     
 
@@ -2927,6 +2958,34 @@ This class can be used in cases where the damage classification is unknown.</rdf
     <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Wear">
         <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#NonReusable">
+        <rdfs:comment xml:lang="en">Building Elements which are not suitable for reuse due to damages (in this context).</rdfs:comment>
+        <rdfs:label xml:lang="en">Non Reusable</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#Reusable">
+        <rdfs:comment xml:lang="en">Building elements which can be reused.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reusable</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassA">
+        <rdfs:label xml:lang="en">Reuse Class A</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassB">
+        <rdfs:label xml:lang="en">Reuse Class B</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassC">
+        <rdfs:label xml:lang="en">Reuse Class C</rdfs:label>
+    </rdf:Description>
     
 
 
