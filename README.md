@@ -2,6 +2,8 @@
 
 The transition to a circular economy and the closure of material loops in the construction sector require careful consideration of material stocks. However, there is a lack of consensus on the specific information needed to assess the reusability of building elements, specifically steel beams. This thesis aims to address this issue within the European and Swiss context. Additionally, digital technologies are recognized as critical enablers of the circular economy, and any consensus reached should be translated into digital formats. Therefore, the thesis also focuses on developing a digital ontology for reusing building elements, specifically steel beams. The research questions are: (1) What information is required to assess the reusability of steel beams in building audits? (2) What should an ontology for building audits to determine steel beam reusability look like? By formalizing and transforming expert knowledge into a readable format for both humans and machines, this thesis aims to facilitate the application of circular economy principles in the construction industry. The research methodology includes literature reviews, surveys, and interviews with reuse experts. The findings contribute to the development of an ontology, the SERO (Steel Element Reuse Ontology), which provides definitions and a logical framework for assessing the reuse potential of steel beams.
 
+In order to examine the findings from the Literature Research, Survey, and Interview, small sections of code were developed. These code snippets are designed to be easily incorporated and utilized. The purpose of these applications is to analyze the provided data, and they are presented solely for the purposes of evaluation and review.
+
 ## Table of Contents
 * [Literature Research](#Literature_Research)
 * [Survey Analysis](#Survey_Analysis)
@@ -34,7 +36,18 @@ The results of the interview, including the viszalization can be found in 03_Int
 
 ## <a name="SERO"></a>SERO
 
-use of [Protégé](https://protege.stanford.edu/) to create the ontology<br/>
-use of [flask](https://palletsprojects.com/p/flask/) to connect app.py with front-end.<br/>
-use of [nicepage.com](https://nicepage.com/) to create front-end answer-page<br/>
-use of [Jotform](https://www.jotform.com/) to create front-end first page to insert answers<br/>
+The development of SERO involved utilizing the ontology editor [Protégé](https://protege.stanford.edu/). The front-end was built using the python library [flask](https://palletsprojects.com/p/flask/), while [Jotform](https://www.jotform.com/) was employed to design the questionnaire. Additionally, [nicepage.com](https://nicepage.com/) was utilized to create the results page.
+
+However, the front-end application for populating and testing SERO can be tested using any python developer tool, such as PyCharm. To begin, obtain the git repository and import the libraries mentioned in the *requirements.txt* file if they are not imported automatically. Follow the steps below:
+
+**Setup**:
+
+1. Open the file *reasoner.py*. </br>
+2. Provide the path to your local java.exe file by assigning it to the variable `owlready2.JAVA_EXE`, or refer to the instructions provided within *reasoner.py*.
+
+**Test SERO**:
+
+1. Launch *app.py*. </br>
+2. Copy the displayed URL, append "/userinput" to it, and paste the modified URL into the command bar of your browser.</br>
+3. The front-end interface should appear. Enter all the required information and click *send*. </br>
+5. The reasoner executes in the background. Once the reasoning process is complete, the results will be shown. </br>
