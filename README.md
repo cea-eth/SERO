@@ -36,7 +36,7 @@ The results of the interview, including the viszalization can be found in 03_Int
 
 ## <a name="SERO"></a>SERO
 
-The development of SERO involved utilizing the ontology editor [Protégé](https://protege.stanford.edu/). The front-end was built using the python library [flask](https://palletsprojects.com/p/flask/), while [Jotform](https://www.jotform.com/) was employed to design the questionnaire. Additionally, [nicepage.com](https://nicepage.com/) was utilized to create the results page.
+The development of SERO involved utilizing the ontology editor [Protégé](https://protege.stanford.edu/). The front-end was built using the python library [flask](https://palletsprojects.com/p/flask/), while [Jotform](https://www.jotform.com/) was employed to design the questionnaire. Additionally, [nicepage.com](https://nicepage.com/) was utilized to create the results page. The application, SERO (the ontology), and the front-end code can be found in 04_SERO.
 
 However, the front-end application for populating and testing SERO can be tested using any python developer tool, such as PyCharm. To begin, obtain the git repository and import the libraries mentioned in the *requirements.txt* file if they are not imported automatically. Follow the steps below:
 
