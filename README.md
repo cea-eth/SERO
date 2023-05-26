@@ -53,6 +53,6 @@ However, the front-end application for populating and testing SERO can be tested
 4. The reasoner executes in the background. Once the reasoning process is complete, the results will be rendered. </br>
 
 **Results Description**:
-1. The first result shown is the type of profile. This is achieved by creating an individual with the properties entered in the /userinput handle. The reasoner uses the SERO ontology to infer the rest of the attributes of the individual. For this output, the attribute: "REPLACEME" is printed.
-2. Next, using the results of the same process described in Point 1, the attribute "REPLACEME" is printed, indicating whether or not the element is reusable.
-3. Finally, the Reuse Class is also inferred by the reasoner. This item corresponds to the attribute "REPLACEME" in the ontology.
+1. The initial outcome displayed is the profile type. This is accomplished by generating an individual with the properties provided in the */userinput* handle. The reasoner utilizes the SERO ontology to deduce the remaining attributes of the individual. In this output, either "I-Profile" or "H-Profile" attribute is printed, as the ontology currently only has the capability to distinguish between these two options.
+2. Following the same process described in Point 1, the attribute "reusable" or "not reusable" is then printed to indicate the reusability of the element. Additionally, if there is any damage present, further information on the damage is provided.
+3. Lastly, the reasoner also infers the Reuse Class. This corresponds to the "Documentation" attributes in the ontology and is printed when specific prerequisites are met, depending on the element's belonging to a particular reuse class.
