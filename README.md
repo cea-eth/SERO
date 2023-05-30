@@ -49,5 +49,10 @@ However, the front-end application for populating and testing SERO can be tested
 
 1. Launch *app.py*. </br>
 2. Copy the displayed URL, append "/userinput" to it, and paste the modified URL into the command bar of your browser.</br>
-3. The front-end interface should appear. Enter all the required information and click *send*. </br>
-5. The reasoner executes in the background. Once the reasoning process is complete, the results will be shown. </br>
+3. Enter all the required information in the front-end form-stle interface and click *send*. </br>
+4. The reasoner executes in the background. Once the reasoning process is complete, the results will be rendered. </br>
+
+**Results Description**:
+1. The initial outcome displayed is the profile type. This is accomplished by generating an individual with the properties provided in the */userinput* handle. The reasoner utilizes the SERO ontology to deduce the remaining attributes of the individual. In this output, either "I-Profile" or "H-Profile" attribute is printed, as the ontology currently only has the capability to distinguish between these two options.
+2. Following the same process described in Point 1, the attribute "reusable" or "not reusable" is then printed to indicate the reusability of the element. Additionally, if there is any damage present, further information on the damage is provided.
+3. Lastly, the reasoner also infers the Reuse Class. This corresponds to the "Documentation" attributes in the ontology and is printed when specific prerequisites are met, depending on the element's belonging to a particular reuse class.
